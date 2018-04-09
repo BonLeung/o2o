@@ -1,0 +1,30 @@
+/target/
+
+# Eclipse
+.metadata/
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.project
+.classpath
+.loadpath
+
+# Java
+*.class
+
+# Maven
+target/
+log/
+
+## Maven release plugin
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
