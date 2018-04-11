@@ -3,6 +3,9 @@ package com.liangweibang.o2o.service;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Date;
 
 import org.junit.Test;
@@ -22,7 +25,7 @@ public class ShopServiceTest extends BaseTest {
 	private ShopService shopService;
 	
 	@Test
-	public void testAddShop() {
+	public void testAddShop() throws FileNotFoundException {
 		Shop shop = new Shop();
 		PersonInfo owner = new PersonInfo();
 		Area area = new Area();
@@ -33,16 +36,17 @@ public class ShopServiceTest extends BaseTest {
 		shop.setOwner(owner);
 		shop.setArea(area);
 		shop.setShopCategory(shopCategory);
-		shop.setName("测试的店铺2");
-		shop.setDesc("test");
-		shop.setAddr("test");
-		shop.setPhone("test");
+		shop.setName("测试的店铺3");
+		shop.setDesc("test3");
+		shop.setAddr("test3");
+		shop.setPhone("test3");
 		shop.setCreateTime(new Date());
 		shop.setStatus(ShopStateEnum.CHECK.getState());
 		shop.setAdvice("审核中");
 		
 		File shopImg = new File("/Users/liangweibang/baidu/img/xiaohuangren.jpeg");
-		ShopExecution shopExecution = shopService.addShop(shop, shopImg);
+		InputStream inputStream = new FileInputStream(shopImg);
+		ShopExecution shopExecution = shopService.addShop(shop, inputStream, shopImg.getName());
 		assertEquals(ShopStateEnum.CHECK.getState(), shopExecution.getState());
 	}
 }
