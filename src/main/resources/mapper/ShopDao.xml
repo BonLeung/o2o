@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liangweibang.o2o.dao.ShopDao">
+	<insert id="insertShop" useGeneratedKeys="true"
+		keyColumn="shop_id" keyProperty="shopId">
+		INSERT INTO
+		tb_shop(`owner_id`, `area_id`, `shop_category_id`, `name`, `desc`, `addr`, `phone`, `avatar`, `priority`,
+		`create_time`, `update_time`, `status`, `advice`)
+		VALUES
+		(#{owner.userId}, #{area.areaId}, #{shopCategory.shopCategoryId}, #{name}, #{desc},
+		#{addr}, #{phone}, #{avatar}, #{priority}, #{createTime},
+		#{updateTime}, #{status}, #{advice})
+	</insert>
+	
+	<update id="updateShop" parameterType="com.liangweibang.o2o.entity.Shop">
+		UPDATE `tb_shop`
+		<set>
+			<if test="name != null">`name`=#{name},</if>
+			<if test="desc != null">`desc`=#{desc},</if>
+			<if test="addr != null">`addr`=#{addr},</if>
+			<if test="phone != null">`phone`=#{phone},</if>
+			<if test="avatar != null">`avatar`=#{avatar},</if>
+			<if test="priority != null">`priority`=#{priority},</if>
+			<if test="status != null">`status`=#{status},</if>
+			<if test="advice != null">`advice`=#{advice},</if>
+			<if test="updateTime != null">`update_time`=#{updateTime},</if>
+			<if test="shopCategory != null">`shop_category_id`=#{shopCategory.shopCategoryId},</if>
+			<if test="area != null">`area_id`=#{area.areaId}</if>
+		</set>
+		WHERE shop_id=#{shopId}
+	</update>
+</mapper>  
