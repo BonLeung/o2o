@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Date;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,6 +19,7 @@ import com.liangweibang.o2o.entity.PersonInfo;
 import com.liangweibang.o2o.entity.Shop;
 import com.liangweibang.o2o.entity.ShopCategory;
 import com.liangweibang.o2o.enums.ShopStateEnum;
+import com.liangweibang.o2o.exception.ShopOperationException;
 
 public class ShopServiceTest extends BaseTest {
 	
@@ -25,6 +27,30 @@ public class ShopServiceTest extends BaseTest {
 	private ShopService shopService;
 	
 	@Test
+	public void testGetShopList() {
+		Shop shopCondition = new Shop();
+		ShopCategory shopCategory = new ShopCategory();
+		shopCategory.setShopCategoryId(2L);
+		shopCondition.setShopCategory(shopCategory);
+		ShopExecution shopExecution = shopService.getShopList(shopCondition, 2, 2);
+		System.out.println(shopExecution.getShopList().size());
+		System.out.println(shopExecution.getCount());
+	}
+	
+	@Test
+	@Ignore
+	public void testModifyShop() throws ShopOperationException, FileNotFoundException {
+		Shop shop = new Shop();
+		shop.setShopId(3l);
+		shop.setName("修改的店铺名称");
+		File shopImg = new File("/Users/liangweibang/baidu/img/dabai.jpeg");
+		InputStream inputStream = new FileInputStream(shopImg);
+		ShopExecution shopExecution = shopService.modifyShop(shop, inputStream, "daibai.jpeg");
+		System.out.println(shopExecution.getShop().getAvatar());
+	}
+	
+	@Test
+	@Ignore
 	public void testAddShop() throws FileNotFoundException {
 		Shop shop = new Shop();
 		PersonInfo owner = new PersonInfo();
@@ -36,7 +62,7 @@ public class ShopServiceTest extends BaseTest {
 		shop.setOwner(owner);
 		shop.setArea(area);
 		shop.setShopCategory(shopCategory);
-		shop.setName("测试的店铺3");
+		shop.setName("测试的店铺1111");
 		shop.setDesc("test3");
 		shop.setAddr("test3");
 		shop.setPhone("test3");

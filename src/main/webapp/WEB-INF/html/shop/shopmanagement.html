@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商铺列表</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+        .content {
+            background: #fff;
+            padding: 0 10px;
+        }
+        .operation-list {
+        	margin: 0;
+        	padding: 10px 0 0 0;
+        }
+        .operation-item {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            background: #f5f5f5;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+                <h1 class="title">商铺管理</h1>
+                </header>
+            <div class="content infinite-scroll infinite-scroll-bottom">
+                <div class="operation-wrap">
+                    <ul class="operation-list">
+                        <li><a href="" class="operation-item" id="shop_info" external>商铺信息</a></li>
+                        <li><a href="" class="operation-item" id="shop_info" external>商品管理</a></li>
+                        <li><a href="" class="operation-item" id="shop_info" external>类别管理</a></li>                        
+                        <li><a href="" class="operation-item danger" id="shop_info" onclick="window.history.back()">返回</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../resources/js/common/common.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../resources/js/shop/shopmanagement.js' charset='utf-8'></script>
+</body>
+
+</html>

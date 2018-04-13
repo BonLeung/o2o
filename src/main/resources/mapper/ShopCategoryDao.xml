@@ -15,6 +15,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		parent_id
 		FROM tb_shop_category
 		<where>
+			<if test="shopCategoryCondition != null">
+				and parent_id is not null
+			</if>
 			<if test="shopCategoryCondition.parent != null">
 				and parent_id = #{shopCategoryCondition.parent.shopCategoryId}
 			</if>

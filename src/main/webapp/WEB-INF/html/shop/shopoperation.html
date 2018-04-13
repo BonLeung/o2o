@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>我的生活</title>
+    <title>注册商铺</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -23,7 +23,7 @@
     <div class="page-group">
         <div class="page page-current">
         <header class="bar bar-nav">
-        	<a class="button button-link button-nav pull-left"><span class="icon icon-left"></span>返回</a>
+        	<a class="button button-link button-nav pull-left" onclick="window.history.back()"><span class="icon icon-left"></span>返回</a>
         	<h1 class="title">商铺信息</h1>
         </header>
         <div class="content">
@@ -109,7 +109,17 @@
                 </div>
               </li>
               <!-- 验证码 kaptcha -->
-              
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">验证码</div>
+                    <input type="text" id="j_captcha" placeholder="验证码">
+                    <div class="item-input">
+                      <img id="captcha_img" src="../Kaptcha" alt="点击更换" title="点击更换" onclick="changeVerifyCode(this)">
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="content-block">
@@ -129,6 +139,7 @@
     <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../resources/js/common/common.js' charset='utf-8'></script>    
     <script type='text/javascript' src='../resources/js/shop/shopoperation.js' charset='utf-8'></script>
   </body>
 </html>

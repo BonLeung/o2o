@@ -69,7 +69,7 @@
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
 			<level>ERROR</level>
 			<onMatch>ACCEPT</onMatch>
-			<onMixmatch>DENY</onMixmatch>
+			<onMismatch>DENY</onMismatch>
 		</filter>
 	</appender>
 	<logger name="com.liangweibang.o2o" level="${log.level}" additivity="true">

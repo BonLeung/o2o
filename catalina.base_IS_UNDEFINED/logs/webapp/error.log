@@ -1,35 +1,45 @@
-2018-04-11 10:41:38.766 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(`owner_id`, `area_id`, `shop_category_id`, `name`, `desc`, `addr`, `phone`, `avatar`, `priority`, `create_time`, `update_time`, `status`, `advice`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-11 10:41:38.800 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺3(String), test3(String), test3(String), test3(String), null, null, 2018-04-11 10:41:38.744(Timestamp), 2018-04-11 10:41:38.744(Timestamp), 0(Integer), 审核中(String)
-2018-04-11 10:41:38.810 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
-2018-04-11 10:41:38.818 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/24/2018041110413875508.jpeg
-2018-04-11 10:41:38.818 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/24/2018041110413875508.jpeg
-2018-04-11 10:41:40.292 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE `tb_shop` SET `name`=?, `desc`=?, `addr`=?, `phone`=?, `avatar`=?, `status`=?, `advice`=?, `update_time`=?, `shop_category_id`=?, `area_id`=? WHERE shop_id=? 
-2018-04-11 10:41:40.293 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), upload/item/shop/24/2018041110413875508.jpeg(String), 0(Integer), 审核中(String), 2018-04-11 10:41:38.744(Timestamp), 1(Long), 2(Integer), 24(Long)
-2018-04-11 10:41:40.298 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
-2018-04-11 15:46:22.706 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2018-04-11 15:46:22.795 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: null
-2018-04-11 15:46:22.862 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 0
-2018-04-11 15:48:50.575 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2018-04-11 15:48:50.676 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-04-11 15:48:50.728 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-04-11 15:58:42.551 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2018-04-11 15:58:42.580 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-04-11 15:58:42.601 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-04-11 16:02:20.322 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2018-04-11 16:02:20.362 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-04-11 16:02:20.390 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-04-11 16:02:20.403 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2018-04-11 16:02:20.403 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-04-11 16:02:20.405 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 0
-2018-04-11 16:03:17.797 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2018-04-11 16:03:17.837 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-04-11 16:03:17.862 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-04-11 16:03:17.875 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2018-04-11 16:03:17.876 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-04-11 16:03:17.883 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-04-11 16:03:44.841 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
-2018-04-11 16:03:44.869 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-04-11 16:03:44.889 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-04-11 16:03:44.902 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, name, avatar, priority, create_time, update_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2018-04-11 16:03:44.903 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-04-11 16:03:44.905 [main] DEBUG c.l.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2018-04-12 09:30:16.110 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.AreaDao.queryArea] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-12 09:30:16.118 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-12 09:30:16.135 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, update_time FROM tb_area ORDER BY priority DESC 
+2018-04-12 09:30:16.176 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2018-04-12 09:30:16.197 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2018-04-12 09:31:05.536 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.updateShop] use [null] Strategy, SqlCommanType [UPDATE]...
+2018-04-12 09:31:05.539 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：null
+2018-04-12 09:31:05.588 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE `tb_shop` SET `name`=?, `desc`=?, `addr`=? WHERE shop_id=? 
+2018-04-12 09:31:05.612 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试名称(String), 测试描述(String), 测试地址(String), 3(Long)
+2018-04-12 09:31:05.622 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-12 09:31:05.625 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.insertShop] use [null] Strategy, SqlCommanType [INSERT]...
+2018-04-12 09:31:05.625 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：null
+2018-04-12 09:31:05.625 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(`owner_id`, `area_id`, `shop_category_id`, `name`, `desc`, `addr`, `phone`, `avatar`, `priority`, `create_time`, `update_time`, `status`, `advice`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-12 09:31:05.630 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-04-12 09:31:05.625(Timestamp), null, 1(Integer), 审核中(String)
+2018-04-12 09:31:05.635 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-04-12 09:33:28.051 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.updateShop] use [null] Strategy, SqlCommanType [UPDATE]...
+2018-04-12 09:33:28.055 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：null
+2018-04-12 09:33:28.091 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE `tb_shop` SET `name`=?, `desc`=?, `addr`=? WHERE shop_id=? 
+2018-04-12 09:33:28.112 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试名称(String), 测试描述(String), 测试地址(String), 3(Long)
+2018-04-12 09:33:28.120 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-12 09:33:28.123 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.insertShop] use [null] Strategy, SqlCommanType [INSERT]...
+2018-04-12 09:33:28.123 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：null
+2018-04-12 09:33:28.124 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(`owner_id`, `area_id`, `shop_category_id`, `name`, `desc`, `addr`, `phone`, `avatar`, `priority`, `create_time`, `update_time`, `status`, `advice`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-12 09:33:28.130 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2018-04-12 09:33:28.123(Timestamp), null, 1(Integer), 审核中(String)
+2018-04-12 09:33:28.132 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-04-12 09:36:52.563 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.updateShop] use [null] Strategy, SqlCommanType [UPDATE]...
+2018-04-12 09:36:53.353 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：null
+2018-04-12 09:37:18.618 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE `tb_shop` SET `name`=?, `desc`=?, `addr`=? WHERE shop_id=? 
+2018-04-12 09:37:18.642 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试名称(String), 测试描述(String), 测试地址(String), 3(Long)
+2018-04-12 09:37:18.646 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-12 09:39:12.603 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.AreaDao.queryArea] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-12 09:39:12.605 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-12 09:39:12.619 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, update_time FROM tb_area ORDER BY priority DESC 
+2018-04-12 09:39:12.658 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2018-04-12 09:39:12.675 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2018-04-12 09:41:43.289 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.updateShop] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-12 09:41:43.791 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-12 09:41:45.622 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE `tb_shop` SET `name`=?, `desc`=?, `addr`=? WHERE shop_id=? 
+2018-04-12 09:41:47.546 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试名称(String), 测试描述(String), 测试地址(String), 3(Long)
+2018-04-12 09:41:47.562 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-12 09:51:07.237 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.AreaDao.queryArea] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-12 09:51:07.239 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-12 09:51:07.253 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, update_time FROM tb_area ORDER BY priority DESC 
+2018-04-12 09:51:07.298 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2018-04-12 09:51:07.316 [main] DEBUG com.liangweibang.o2o.dao.AreaDao.queryArea - <==      Total: 2
