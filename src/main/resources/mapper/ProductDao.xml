@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liangweibang.o2o.dao.ProductDao">
+	<insert id="insertProduct" parameterType="com.liangweibang.o2o.entity.Product" useGeneratedKeys="true" keyProperty="productId" keyColumn="product_id">
+		INSERT INTO
+		tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`)
+		VALUES
+		(#{name}, #{desc}, #{addr}, #{normalPrice}, #{promotionPrice}, #{priority}, #{createTime}, #{updateTime}, #{status}, #{productCategory.productCategoryId}, #{shop.shopId})
+	</insert>
+</mapper>  

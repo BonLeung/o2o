@@ -1,123 +1,293 @@
-2018-04-13 02:06:54.034 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:06:54.046 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:07:43.301 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:07:43.303 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:07:44.471 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:07:44.474 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:09:41.956 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:09:41.958 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:09:41.973 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:09:42.010 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:09:43.005 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:09:43.008 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:09:43.022 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:09:43.059 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:10:29.250 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:10:29.252 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:10:29.267 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:10:29.303 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:10:29.331 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 5
-2018-04-13 02:12:12.736 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:12:12.738 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:12:12.754 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:12:12.791 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:12:12.809 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 5
-2018-04-13 02:12:12.816 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:12:12.816 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:12:12.817 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:12:12.817 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
-2018-04-13 02:12:12.825 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:16:32.789 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:16:32.791 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:16:32.806 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:16:32.841 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:16:32.860 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 5
-2018-04-13 02:16:32.866 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:16:32.867 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:16:32.867 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:16:32.867 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
-2018-04-13 02:16:32.868 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:16:32.870 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:16:32.870 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:16:32.870 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_di = ? and s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:16:32.871 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:17:39.599 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:17:39.602 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:17:39.618 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:17:39.654 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:17:39.673 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 5
-2018-04-13 02:17:39.680 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:17:39.680 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:17:39.680 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:17:39.681 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
-2018-04-13 02:17:39.682 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:17:39.684 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:17:39.684 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:17:39.685 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? and s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:17:39.685 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 1(Long), 0(Integer), 5(Integer)
-2018-04-13 02:17:39.694 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
-2018-04-13 02:17:39.695 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:17:39.695 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:17:39.695 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:17:39.696 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long), 1(Long)
-2018-04-13 02:17:39.697 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:52:33.405 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:52:33.408 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:52:33.421 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:52:33.458 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Long), 0(Integer), 2(Integer)
-2018-04-13 02:52:33.472 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 0
-2018-04-13 02:52:33.480 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:52:33.480 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:52:33.480 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:52:33.480 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long)
-2018-04-13 02:52:33.482 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:53:22.385 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:53:22.388 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:53:22.402 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:53:22.440 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Long), 0(Integer), 2(Integer)
-2018-04-13 02:53:22.453 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 0
-2018-04-13 02:53:22.459 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:53:22.459 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:53:22.459 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:53:22.460 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long)
-2018-04-13 02:53:22.461 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:54:37.299 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:54:37.302 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:54:37.322 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:54:37.362 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Long), 0(Integer), 2(Integer)
-2018-04-13 02:54:37.378 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 0
-2018-04-13 02:54:37.385 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:54:37.385 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:54:37.386 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:54:37.386 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long)
-2018-04-13 02:54:37.388 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:54:49.746 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:54:49.749 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:54:49.764 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:54:49.799 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 2(Integer)
-2018-04-13 02:54:49.815 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 2
-2018-04-13 02:54:49.821 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:54:49.822 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:54:49.822 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:54:49.823 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
-2018-04-13 02:54:49.824 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:55:24.318 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:55:24.321 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:55:24.335 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:55:24.373 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 2(Integer)
-2018-04-13 02:55:24.389 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 2
-2018-04-13 02:55:24.395 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:55:24.396 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:55:24.396 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:55:24.396 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
-2018-04-13 02:55:24.397 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2018-04-13 02:55:52.458 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:55:52.461 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:55:52.475 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
-2018-04-13 02:55:52.511 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 2(Integer), 2(Integer)
-2018-04-13 02:55:52.525 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 1
-2018-04-13 02:55:52.531 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-13 02:55:52.531 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-13 02:55:52.531 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2018-04-13 02:55:52.532 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
-2018-04-13 02:55:52.533 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2018-04-14 01:17:03.376 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.batchInsertProductCategory] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 01:17:03.380 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:17:03.414 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(`name`, `priority`, `create_time`, `update_time`, `shop_id`) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-04-14 01:17:03.437 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-04-14 01:17:03.362(Timestamp), null, 3(Long), 商品类别2(String), 2(Integer), 2018-04-14 01:17:03.362(Timestamp), null, 3(Long), 商品类别3(String), 3(Integer), 2018-04-14 01:17:03.362(Timestamp), null, 3(Long)
+2018-04-14 01:17:03.441 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - <==    Updates: 3
+2018-04-14 01:17:03.450 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 01:17:03.451 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 01:17:03.452 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, name, priority, create_time, update_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-14 01:17:03.464 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==> Parameters: 3(Long)
+2018-04-14 01:17:03.481 [main] DEBUG c.l.o.d.P.queryProductCategoryList - <==      Total: 12
+2018-04-14 01:17:03.489 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:17:03.489 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:17:03.489 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? ADN shop_id = ? 
+2018-04-14 01:17:03.491 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 7(Long), 3(Long)
+2018-04-14 01:17:54.316 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.batchInsertProductCategory] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 01:17:54.319 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:17:54.351 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(`name`, `priority`, `create_time`, `update_time`, `shop_id`) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-04-14 01:17:54.374 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-04-14 01:17:54.303(Timestamp), null, 3(Long), 商品类别2(String), 2(Integer), 2018-04-14 01:17:54.303(Timestamp), null, 3(Long), 商品类别3(String), 3(Integer), 2018-04-14 01:17:54.303(Timestamp), null, 3(Long)
+2018-04-14 01:17:54.381 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - <==    Updates: 3
+2018-04-14 01:17:54.390 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 01:17:54.391 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 01:17:54.391 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, name, priority, create_time, update_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-14 01:17:54.403 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==> Parameters: 3(Long)
+2018-04-14 01:17:54.418 [main] DEBUG c.l.o.d.P.queryProductCategoryList - <==      Total: 15
+2018-04-14 01:17:54.425 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:17:54.425 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:17:54.425 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE `product_category_id` = ? ADN `shop_id` = ? 
+2018-04-14 01:17:54.425 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 7(Long), 3(Long)
+2018-04-14 01:17:55.365 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.batchInsertProductCategory] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 01:17:55.367 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:17:55.401 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(`name`, `priority`, `create_time`, `update_time`, `shop_id`) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-04-14 01:17:55.424 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-04-14 01:17:55.351(Timestamp), null, 3(Long), 商品类别2(String), 2(Integer), 2018-04-14 01:17:55.351(Timestamp), null, 3(Long), 商品类别3(String), 3(Integer), 2018-04-14 01:17:55.351(Timestamp), null, 3(Long)
+2018-04-14 01:17:55.431 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - <==    Updates: 3
+2018-04-14 01:17:55.440 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 01:17:55.440 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 01:17:55.440 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, name, priority, create_time, update_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-14 01:17:55.453 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==> Parameters: 3(Long)
+2018-04-14 01:17:55.474 [main] DEBUG c.l.o.d.P.queryProductCategoryList - <==      Total: 18
+2018-04-14 01:17:55.482 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:17:55.482 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:17:55.482 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE `product_category_id` = ? ADN `shop_id` = ? 
+2018-04-14 01:17:55.482 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 7(Long), 3(Long)
+2018-04-14 01:18:52.794 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.batchInsertProductCategory] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 01:18:52.798 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.799 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.batchInsertProductCategory] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 01:18:52.801 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.833 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(`name`, `priority`, `create_time`, `update_time`, `shop_id`) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-04-14 01:18:52.837 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(`name`, `priority`, `create_time`, `update_time`, `shop_id`) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-04-14 01:18:52.860 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-04-14 01:18:52.776(Timestamp), null, 3(Long), 商品类别2(String), 2(Integer), 2018-04-14 01:18:52.776(Timestamp), null, 3(Long), 商品类别3(String), 3(Integer), 2018-04-14 01:18:52.776(Timestamp), null, 3(Long)
+2018-04-14 01:18:52.862 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-04-14 01:18:52.777(Timestamp), null, 3(Long), 商品类别2(String), 2(Integer), 2018-04-14 01:18:52.777(Timestamp), null, 3(Long), 商品类别3(String), 3(Integer), 2018-04-14 01:18:52.777(Timestamp), null, 3(Long)
+2018-04-14 01:18:52.869 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - <==    Updates: 3
+2018-04-14 01:18:52.869 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - <==    Updates: 3
+2018-04-14 01:18:52.879 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 01:18:52.879 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 01:18:52.879 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 01:18:52.880 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 01:18:52.880 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, name, priority, create_time, update_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-14 01:18:52.881 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, name, priority, create_time, update_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-14 01:18:52.915 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==> Parameters: 3(Long)
+2018-04-14 01:18:52.916 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==> Parameters: 3(Long)
+2018-04-14 01:18:52.933 [main] DEBUG c.l.o.d.P.queryProductCategoryList - <==      Total: 24
+2018-04-14 01:18:52.936 [main] DEBUG c.l.o.d.P.queryProductCategoryList - <==      Total: 24
+2018-04-14 01:18:52.945 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.945 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.946 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.946 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 7(Long), 3(Long)
+2018-04-14 01:18:52.950 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.951 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.951 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.951 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.952 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 13(Long), 3(Long)
+2018-04-14 01:18:52.953 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.954 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.954 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.954 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.955 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 16(Long), 3(Long)
+2018-04-14 01:18:52.955 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.956 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.956 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.957 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.957 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 7(Long), 3(Long)
+2018-04-14 01:18:52.957 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.958 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.958 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.958 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 0
+2018-04-14 01:18:52.958 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 19(Long), 3(Long)
+2018-04-14 01:18:52.960 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.960 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.960 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.961 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.962 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 22(Long), 3(Long)
+2018-04-14 01:18:52.963 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.964 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.964 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.964 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.965 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 25(Long), 3(Long)
+2018-04-14 01:18:52.967 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.968 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.968 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.969 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.970 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 6(Long), 3(Long)
+2018-04-14 01:18:52.971 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.972 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.972 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.972 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.973 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 12(Long), 3(Long)
+2018-04-14 01:18:52.974 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.975 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.975 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.975 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.975 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 15(Long), 3(Long)
+2018-04-14 01:18:52.977 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.977 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.977 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.978 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.978 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 18(Long), 3(Long)
+2018-04-14 01:18:52.980 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.980 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.980 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.980 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.981 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 21(Long), 3(Long)
+2018-04-14 01:18:52.982 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.983 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.983 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.983 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.984 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 24(Long), 3(Long)
+2018-04-14 01:18:52.985 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.986 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.986 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.987 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.987 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 5(Long), 3(Long)
+2018-04-14 01:18:52.988 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.989 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.989 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.990 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.991 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 11(Long), 3(Long)
+2018-04-14 01:18:52.993 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:52.995 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:52.996 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:52.996 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:52.997 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 14(Long), 3(Long)
+2018-04-14 01:18:52.999 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:53.000 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:53.001 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:53.001 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:53.001 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 17(Long), 3(Long)
+2018-04-14 01:18:53.003 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:53.003 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:53.003 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:53.004 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:53.004 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 20(Long), 3(Long)
+2018-04-14 01:18:53.005 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:18:53.006 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:18:53.006 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:18:53.006 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:18:53.007 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 23(Long), 3(Long)
+2018-04-14 01:18:53.008 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:21:13.655 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.batchInsertProductCategory] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 01:21:13.658 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:21:13.695 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(`name`, `priority`, `create_time`, `update_time`, `shop_id`) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-04-14 01:21:13.718 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-04-14 01:21:13.641(Timestamp), null, 3(Long), 商品类别2(String), 2(Integer), 2018-04-14 01:21:13.641(Timestamp), null, 3(Long), 商品类别3(String), 3(Integer), 2018-04-14 01:21:13.641(Timestamp), null, 3(Long)
+2018-04-14 01:21:13.726 [main] DEBUG c.l.o.d.P.batchInsertProductCategory - <==    Updates: 3
+2018-04-14 01:21:13.734 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.queryProductCategoryList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 01:21:13.734 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 01:21:13.734 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, name, priority, create_time, update_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2018-04-14 01:21:13.745 [main] DEBUG c.l.o.d.P.queryProductCategoryList - ==> Parameters: 3(Long)
+2018-04-14 01:21:13.766 [main] DEBUG c.l.o.d.P.queryProductCategoryList - <==      Total: 9
+2018-04-14 01:21:13.774 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:21:13.774 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:21:13.775 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:21:13.775 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 28(Long), 3(Long)
+2018-04-14 01:21:13.778 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:21:13.779 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:21:13.779 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:21:13.779 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:21:13.779 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 27(Long), 3(Long)
+2018-04-14 01:21:13.781 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 01:21:13.781 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductCategoryDao.deleteProductCategory] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-14 01:21:13.781 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 01:21:13.781 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
+2018-04-14 01:21:13.782 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 26(Long), 3(Long)
+2018-04-14 01:21:13.783 [main] DEBUG c.l.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2018-04-14 09:21:32.197 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 09:21:32.200 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 09:21:32.242 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(addr, desc, priority, create_time, update_time, product_id) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-14 09:22:32.577 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 09:22:32.580 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 09:22:32.610 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(addr, desc, priority, create_time, update_time, product_id) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-14 09:22:32.630 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), null, null, 2(Long), 图片2(String), 测试图片2(String), 2(Integer), null, null, 2(Long)
+2018-04-14 09:22:33.644 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 09:22:33.646 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 09:22:33.681 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(addr, desc, priority, create_time, update_time, product_id) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-14 09:22:33.712 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), null, null, 2(Long), 图片2(String), 测试图片2(String), 2(Integer), null, null, 2(Long)
+2018-04-14 09:23:24.790 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 09:23:24.792 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 09:23:24.828 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-14 09:23:24.853 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), null, null, 2(Long), 图片2(String), 测试图片2(String), 2(Integer), null, null, 2(Long)
+2018-04-14 09:23:24.862 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-14 10:25:42.248 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:25:42.250 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:25:42.262 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(name, desc, addr, normal_price, promotion_rpice, priority, create_time, update_time, status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:26:33.595 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:26:33.598 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:26:33.609 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(name, desc, addr, normal_price, promotion_rpice, priority, create_time, update_time, status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:26:33.632 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:26:35.908 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:26:35.914 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:26:35.978 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(name, desc, addr, normal_price, promotion_rpice, priority, create_time, update_time, status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:26:36.031 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:26:36.142 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:26:36.192 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:26:36.224 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(name, desc, addr, normal_price, promotion_rpice, priority, create_time, update_time, status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:26:36.227 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:26:36.232 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:26:36.256 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(name, desc, addr, normal_price, promotion_rpice, priority, create_time, update_time, status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:26:36.278 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:26:36.313 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:26:37.069 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:26:37.071 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:26:37.087 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(name, desc, addr, normal_price, promotion_rpice, priority, create_time, update_time, status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:26:37.114 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:27:42.457 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:27:42.461 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:27:42.480 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:27:42.512 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:27:43.187 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:27:43.190 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:27:43.203 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:27:43.228 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, null, 4(Long), 3(Long)
+2018-04-14 10:28:53.096 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:28:53.099 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:28:53.114 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:28:53.147 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:28:53.380 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:28:53.384 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:28:53.398 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:28:53.428 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:28:53.436 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-14 10:28:53.443 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:28:53.443 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:28:53.443 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:28:53.444 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:31:08.082 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:31:08.085 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:31:08.097 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:31:08.121 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:33:34.783 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:33:34.785 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:33:34.798 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:33:34.823 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:33:34.830 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-14 10:33:34.836 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:33:34.837 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:33:34.837 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:33:34.837 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:33:34.839 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-14 10:34:07.492 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:34:07.494 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:34:07.507 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:34:07.535 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:34:07.542 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-14 10:34:07.549 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:34:07.549 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:34:07.549 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:34:07.550 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:34:07.551 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-14 10:34:07.552 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 10:34:07.552 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 10:34:07.552 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 10:34:07.553 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-14 10:34:07.554 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-14 11:14:30.066 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.insertShop] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-14 11:14:30.068 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 11:14:30.076 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(`owner_id`, `area_id`, `shop_category_id`, `name`, `desc`, `addr`, `phone`, `avatar`, `priority`, `create_time`, `update_time`, `status`, `advice`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-14 11:14:30.103 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺123(String), test3(String), test3(String), test3(String), null, null, 2018-04-14 11:14:30.052(Timestamp), 2018-04-14 11:14:30.052(Timestamp), 0(Integer), 审核中(String)
+2018-04-14 11:14:30.105 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2018-04-14 11:14:30.115 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/36/2018041411143057019.jpeg
+2018-04-14 11:14:30.115 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/36/2018041411143057019.jpeg
+2018-04-14 11:14:30.618 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.updateShop] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-14 11:14:30.619 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-14 11:14:30.643 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE `tb_shop` SET `name`=?, `desc`=?, `addr`=?, `phone`=?, `avatar`=?, `status`=?, `advice`=?, `update_time`=?, `shop_category_id`=?, `area_id`=? WHERE shop_id=? 
+2018-04-14 11:14:30.644 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺123(String), test3(String), test3(String), test3(String), upload/item/shop/36/2018041411143057019.jpeg(String), 0(Integer), 审核中(String), 2018-04-14 11:14:30.052(Timestamp), 1(Long), 2(Integer), 36(Long)
+2018-04-14 11:14:30.645 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2018-04-14 11:14:30.664 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 11:14:30.665 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 11:14:30.666 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.name, s.desc, s.addr, s.phone, s.avatar, s.priority, s.create_Time, s.update_time, s.status, s.advice, a.area_id, a.area_name, sc.shop_Category_id, sc.name FROM tb_shop s, tb_area a, tb_shop_Category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ? 
+2018-04-14 11:14:30.681 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 2(Integer), 2(Integer)
+2018-04-14 11:14:30.700 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+2018-04-14 11:14:30.706 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ShopDao.queryShopCount] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-14 11:14:30.707 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-14 11:14:30.707 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_Shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2018-04-14 11:14:30.707 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2018-04-14 11:14:30.709 [main] DEBUG com.liangweibang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

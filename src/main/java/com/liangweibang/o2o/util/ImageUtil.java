@@ -13,6 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import com.liangweibang.o2o.dto.ImageHolder;
+
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 
@@ -29,17 +31,17 @@ public class ImageUtil {
 	 * @param targetAddr
 	 * @return
 	 */
-	public static String generateThumbnail(InputStream thumbnailInputStream, String fileName, String targetAddr) {
+	public static String generateThumbnail(ImageHolder thumbnail, String targetAddr) {
 		String realFileName = getRandomFileName();
 		
-		String extension = getFileExtension(fileName);
+		String extension = getFileExtension(thumbnail.getImageName());
 		makeDirPath(targetAddr);
 		String relativeAddr = targetAddr + realFileName + extension;
 		logger.debug("current relativeAddr is " + relativeAddr);
 		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
 		logger.debug("current complete addr is " + PathUtil.getImgBasePath() + relativeAddr);
 		try {
-			Thumbnails.of(thumbnailInputStream).size(200, 200)
+			Thumbnails.of(thumbnail.getImage()).size(200, 200)
 			.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermask.png")), 0.25f)
 			.outputQuality(0.8f).toFile(dest);
 		} catch (IOException e) {

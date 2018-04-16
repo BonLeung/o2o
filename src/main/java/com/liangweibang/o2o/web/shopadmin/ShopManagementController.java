@@ -9,6 +9,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.ibatis.reflection.wrapper.BaseWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.liangweibang.o2o.dao.ShopDao;
+import com.liangweibang.o2o.dto.ImageHolder;
 import com.liangweibang.o2o.dto.ShopExecution;
 import com.liangweibang.o2o.entity.Area;
 import com.liangweibang.o2o.entity.PersonInfo;
@@ -155,9 +157,10 @@ public class ShopManagementController {
 			ShopExecution shopExecution;
 			try {
 				if (shopImg == null) {
-					shopExecution = shopService.modifyShop(shop, null, null);
+					shopExecution = shopService.modifyShop(shop, null);
 				} else {
-					shopExecution = shopService.modifyShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+					ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(), shopImg.getInputStream());
+					shopExecution = shopService.modifyShop(shop, imageHolder);
 				}
 				if (shopExecution.getState() == ShopStateEnum.SUCCESS.getState()) {
 					modelMap.put("success", true);
@@ -237,7 +240,8 @@ public class ShopManagementController {
 			shop.setOwner(owner);
 			ShopExecution shopExecution;
 			try {
-				shopExecution = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+				ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(), shopImg.getInputStream());
+				shopExecution = shopService.addShop(shop, imageHolder);
 				if (shopExecution.getState() == ShopStateEnum.CHECK.getState()) {
 					modelMap.put("success", true);
 					// 该用户可以操作的店铺列表

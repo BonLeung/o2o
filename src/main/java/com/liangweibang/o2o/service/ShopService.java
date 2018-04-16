@@ -2,6 +2,7 @@ package com.liangweibang.o2o.service;
 
 import java.io.InputStream;
 
+import com.liangweibang.o2o.dto.ImageHolder;
 import com.liangweibang.o2o.dto.ShopExecution;
 import com.liangweibang.o2o.entity.Shop;
 import com.liangweibang.o2o.exception.ShopOperationException;
@@ -15,7 +16,7 @@ public interface ShopService {
 	 * @param fileName
 	 * @return
 	 */
-	ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+	ShopExecution addShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 	
 	/**
 	 * 通过 shopId 获取店铺信息
@@ -31,7 +32,7 @@ public interface ShopService {
 	 * @param fileName
 	 * @return
 	 */
-	ShopExecution modifyShop(Shop shop, InputStream shopInputStream, String fileName) throws ShopOperationException;
+	ShopExecution modifyShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 	
 	/**
 	 * 根据 shopCondition 分页返回相应店铺列表
