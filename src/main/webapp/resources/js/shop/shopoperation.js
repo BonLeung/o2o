@@ -5,7 +5,7 @@ $(function() {
     var initUrl = '/o2o/shopadmin/getshopinitinfo';
     var registerShopUrl = '/o2o/shopadmin/registershop';
     var shopId = getQueryString('shopId');
-    var isEdit = shopId ? true : flase;
+    var isEdit = shopId ? true : false;
     var shopInfoUrl = "/o2o/shopadmin/getshopbyid?shopId=" + shopId;
     var editShopUrl = "/o2o/shopadmin/modifyshop";
 
