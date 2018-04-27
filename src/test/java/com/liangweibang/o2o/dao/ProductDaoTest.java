@@ -2,18 +2,28 @@ package com.liangweibang.o2o.dao;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.liangweibang.o2o.BaseTest;
 import com.liangweibang.o2o.entity.Product;
 import com.liangweibang.o2o.entity.ProductCategory;
+import com.liangweibang.o2o.entity.ProductImg;
 import com.liangweibang.o2o.entity.Shop;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductDaoTest extends BaseTest {
 
 	@Autowired
 	private ProductDao productDao;
+	@Autowired
+	private ProductImgDao productImgDao;
 	
 	@Test
 	public void testInsertProduct() {
@@ -55,5 +65,51 @@ public class ProductDaoTest extends BaseTest {
 		assertEquals(1, effectedNum2);
 		int effectedNum3 = productDao.insertProduct(product3);
 		assertEquals(1, effectedNum3);
+	}
+	
+	@Test
+	public void testCQueryProductByProductId() throws Exception {
+		long productId = 2;
+		// 初始化两个商品详情图实例作为 productId 为2的商品下的详情图片
+		ProductImg productImg1 = new ProductImg();
+		productImg1.setAddr("图片1");
+		productImg1.setDesc("测试图片1");
+		productImg1.setPriority(1);
+		productImg1.setCreateTime(new Date());
+		productImg1.setProductId(productId);
+		ProductImg productImg2 = new ProductImg();
+		productImg2.setAddr("图片2");
+		productImg2.setDesc("测试图片2");
+		productImg2.setPriority(1);
+		productImg2.setCreateTime(new Date());
+		productImg2.setProductId(productId);
+		List<ProductImg> productImgList = new ArrayList<>();
+		productImgList.add(productImg1);
+		productImgList.add(productImg2);
+		int effectedNum = productImgDao.batchInsertProductImg(productImgList);
+		assertEquals(2, effectedNum);
+		// 查询 productId 为 2 的商品信息并校验返回的详情图实例列表size 是否为 2
+		Product product = productDao.queryProductById(productId);
+		assertEquals(2, product.getProductImgs().size());
+		// 删除新增的这两个商品详情图实例
+		effectedNum = productImgDao.deleteProductImgByProductId(productId);
+		assertEquals(2, effectedNum);
+	}
+	
+	@Test
+	public void testDUpdateProduct() throws Exception {
+		Product product = new Product();
+		ProductCategory productCategory = new ProductCategory();
+		Shop shop = new Shop();
+		shop.setShopId(3l);
+		productCategory.setProductCategoryId(31l);
+		product.setProductId(2l);
+		product.setShop(shop);
+		product.setName("奶茶111");
+		product.setProductCategory(productCategory);
+		// 修改 productID 为 2 的商品的名称
+		// 以及商品类别并校验影响的行数是否为 1
+		int effectedNum = productDao.updateProduct(product);
+		assertEquals(1, effectedNum);
 	}
 }

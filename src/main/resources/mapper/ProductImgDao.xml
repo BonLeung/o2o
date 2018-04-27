@@ -11,4 +11,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			(#{productImg.addr}, #{productImg.desc}, #{productImg.priority}, #{productImg.createTime}, #{productImg.updateTime}, #{productImg.productId})
 		</foreach>
 	</insert>
+	<delete id="deleteProductImgByProductId">
+		DELETE FROM
+		tb_product_img
+		WHERE 
+		product_id = #{productId}
+	</delete>
 </mapper>  

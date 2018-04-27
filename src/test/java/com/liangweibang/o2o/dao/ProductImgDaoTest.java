@@ -1,5 +1,7 @@
 package com.liangweibang.o2o.dao;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +40,13 @@ public class ProductImgDaoTest extends BaseTest {
 		
 		productImgDao.batchInsertProductImg(productImgList);
 		
+	}
+	
+	@Test
+	public void testCDeleteProductImgByProductId() throws Exception {
+		long productId = 2;
+		int effectedNum = productImgDao.deleteProductImgByProductId(productId);
+		assertEquals(2, effectedNum);
 	}
 	
 }
