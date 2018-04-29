@@ -26,7 +26,7 @@ public class ProductDaoTest extends BaseTest {
 	private ProductImgDao productImgDao;
 	
 	@Test
-	public void testInsertProduct() {
+	public void testAInsertProduct() {
 		Shop shop = new Shop();
 		shop.setShopId(3l);
 		ProductCategory productCategory = new ProductCategory();
@@ -65,6 +65,23 @@ public class ProductDaoTest extends BaseTest {
 		assertEquals(1, effectedNum2);
 		int effectedNum3 = productDao.insertProduct(product3);
 		assertEquals(1, effectedNum3);
+	}
+	
+	@Test
+	public void testBQueryProductList() throws Exception {
+		Product productCondition = new Product();
+		// 分页查询，预期返回三条结果
+		List<Product> productList = productDao.queryProductList(productCondition, 0, 3);
+		assertEquals(3, productList.size());
+		// 。查询名称为测试的商品总数
+		int count = productDao.queryProductCount(productCondition);
+		assertEquals(4, count);
+		// 使用商品名称模糊查询，预期返回两条结果
+		productCondition.setName("测试");
+		productList = productDao.queryProductList(productCondition, 0, 3);
+		assertEquals(2, productList.size());
+		count = productDao.queryProductCount(productCondition);
+		assertEquals(2, count);
 	}
 	
 	@Test

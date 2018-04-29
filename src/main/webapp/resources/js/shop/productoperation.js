@@ -35,7 +35,7 @@ $(function() {
                 var optionSelected = product.productCategory.productCategoryId;
                 optionArr.map(function(item, index) {
                     var isSelect = optionSelected === item.productCategoryId ? 'selected' : '';
-                    optionHTML += '<option data-value="' + item.productCategoryId + '" ' + isSelect + '>' + item.productCategoryName + '</option>';
+                    optionHTML += '<option data-value="' + item.productCategoryId + '" ' + isSelect + '>' + item.name + '</option>';
                 })
                 $('#category').html(optionHTML);
             }

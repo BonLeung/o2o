@@ -1,269 +1,474 @@
-2018-04-28 00:47:25.553 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:47:25.560 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:47:25.600 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:47:25.625 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:47:25.536(Timestamp), null, 2(Long), 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:47:25.536(Timestamp), null, 2(Long)
-2018-04-28 00:47:25.633 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:47:25.644 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:47:25.644 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:47:25.645 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:47:25.657 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:47:25.680 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:47:25.686 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:47:25.686 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:47:25.687 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:47:25.687 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:47:25.690 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:47:25.692 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:47:25.693 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:47:25.693 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:47:25.694 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:47:25.697 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:47:25.698 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:47:25.698 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:47:25.698 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:47:25.699 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:47:25.701 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:47:25.701 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:47:25.701 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:47:25.702 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:47:25.702 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:47:25.704 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:53:18.386 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 00:53:18.388 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:53:18.433 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=? product_category_id=? WHERE product_id = ? AND shop_id = ? 
-2018-04-28 00:53:18.457 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 00:53:18.516 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:53:18.517 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:53:18.519 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:53:18.522 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:53:18.516(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 00:53:18.516(Timestamp), null, 2(Long)
-2018-04-28 00:53:18.524 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:53:18.532 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:53:18.532 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:53:18.533 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:53:18.545 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:53:18.562 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:53:18.563 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:53:18.564 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:53:18.564 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:53:18.564 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:53:18.566 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:53:18.567 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:53:18.567 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:53:18.567 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:53:18.568 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:53:18.570 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:53:18.570 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:53:18.570 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:53:18.571 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:53:18.571 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:53:18.572 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:53:18.573 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:53:18.573 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:53:18.573 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:53:18.574 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:53:18.576 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:54:30.585 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:54:30.588 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:54:30.624 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:54:30.647 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:54:30.57(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 00:54:30.57(Timestamp), null, 2(Long)
-2018-04-28 00:54:30.653 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:54:30.660 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:54:30.660 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:54:30.661 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:54:30.671 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:54:30.695 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:54:30.702 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:54:30.702 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:54:30.702 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:54:30.703 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:54:30.704 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:54:30.707 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 00:54:30.708 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:54:30.718 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=? product_category_id=? WHERE product_id = ? AND shop_id = ? 
-2018-04-28 00:54:30.718 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 00:54:30.765 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:54:30.765 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:54:30.765 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:54:30.766 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:54:30.770 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:54:30.771 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:54:30.771 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:54:30.771 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:54:30.772 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:54:30.773 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:54:30.774 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:54:30.774 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:54:30.774 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:54:30.775 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:54:30.776 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:56:29.778 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:29.781 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:29.814 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:29.836 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:56:29.766(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 00:56:29.766(Timestamp), null, 2(Long)
-2018-04-28 00:56:29.844 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:56:29.851 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:56:29.851 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:56:29.852 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:56:29.867 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:56:29.889 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:56:29.896 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:56:29.896 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:29.897 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:56:29.897 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:56:29.899 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:56:29.903 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 00:56:29.903 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:29.925 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=? product_category_id=? WHERE `product_id` = ? AND `shop_id` = ? 
-2018-04-28 00:56:29.926 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 00:56:29.994 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:29.994 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:29.995 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:29.996 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:56:29.999 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:56:30.000 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:30.000 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.000 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:30.001 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:56:30.003 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:56:30.004 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:30.004 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.004 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:30.005 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:56:30.010 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:56:30.748 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:30.751 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.786 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:30.809 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:56:30.734(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 00:56:30.734(Timestamp), null, 2(Long)
-2018-04-28 00:56:30.816 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:56:30.823 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:56:30.823 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:56:30.824 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:56:30.835 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:56:30.851 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:56:30.857 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:56:30.857 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.857 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:56:30.857 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:56:30.859 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:56:30.861 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 00:56:30.862 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.870 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=? product_category_id=? WHERE `product_id` = ? AND `shop_id` = ? 
-2018-04-28 00:56:30.871 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 00:56:30.924 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:30.925 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.925 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:30.926 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:56:30.929 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:56:30.929 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:30.929 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.930 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:30.930 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:56:30.932 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:56:30.933 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:56:30.933 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:56:30.933 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:56:30.934 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:56:30.935 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:58:48.713 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:48.717 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.753 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:48.780 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:58:48.698(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 00:58:48.698(Timestamp), null, 2(Long)
-2018-04-28 00:58:48.787 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:58:48.794 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:58:48.794 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:58:48.795 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:58:48.795 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:48.799 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.812 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:58:48.844 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:58:48.853 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:58:48.853 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.853 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:58:48.854 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:58:48.857 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:58:48.860 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 00:58:48.860 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.868 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:48.872 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=? product_category_id=? WHERE product_id = ? AND shop_id = ? 
-2018-04-28 00:58:48.873 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 00:58:48.909 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 00:58:48.777(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 00:58:48.777(Timestamp), null, 2(Long)
-2018-04-28 00:58:48.915 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 00:58:48.925 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 00:58:48.926 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 00:58:48.931 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 00:58:48.937 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:48.937 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.937 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:48.940 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:58:48.945 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:58:48.963 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:48.963 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.964 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:48.965 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 00:58:48.965 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:58:48.967 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:58:48.968 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:48.968 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.968 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:48.969 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:58:48.971 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:58:48.988 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 00:58:48.996 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 00:58:48.996 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:48.996 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 00:58:48.997 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 00:58:48.999 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 00:58:49.003 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 00:58:49.003 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:49.018 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=? product_category_id=? WHERE product_id = ? AND shop_id = ? 
-2018-04-28 00:58:49.019 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 00:58:49.070 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:49.071 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:49.071 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:49.072 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:58:49.076 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:58:49.077 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:49.077 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:49.077 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:49.078 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:58:49.079 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 00:58:49.080 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 00:58:49.080 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 00:58:49.081 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 00:58:49.082 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 00:58:49.083 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 01:00:36.112 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 01:00:36.115 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 01:00:36.149 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2018-04-28 01:00:36.172 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-28 01:00:36.097(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-28 01:00:36.097(Timestamp), null, 2(Long)
-2018-04-28 01:00:36.180 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2018-04-28 01:00:36.186 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
-2018-04-28 01:00:36.187 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2018-04-28 01:00:36.187 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2018-04-28 01:00:36.198 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
-2018-04-28 01:00:36.214 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2018-04-28 01:00:36.220 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
-2018-04-28 01:00:36.220 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 01:00:36.220 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2018-04-28 01:00:36.220 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
-2018-04-28 01:00:36.223 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2018-04-28 01:00:36.226 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
-2018-04-28 01:00:36.226 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 01:00:36.239 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
-2018-04-28 01:00:36.240 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
-2018-04-28 01:00:36.242 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2018-04-28 01:00:36.244 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 01:00:36.244 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 01:00:36.245 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 01:00:36.246 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 01:00:36.247 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 01:00:36.248 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 01:00:36.248 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 01:00:36.248 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 01:00:36.249 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 01:00:36.251 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2018-04-28 01:00:36.252 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
-2018-04-28 01:00:36.252 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2018-04-28 01:00:36.252 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2018-04-28 01:00:36.253 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
-2018-04-28 01:00:36.254 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 02:26:03.674 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:26:03.679 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:26:03.687 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:26:03.707 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:26:03.727 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 1
+2018-04-29 02:26:03.734 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902260390470.jpeg
+2018-04-29 02:26:03.735 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902260390470.jpeg
+2018-04-29 02:26:05.176 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:26:05.177 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:26:05.177 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:26:05.177 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:26:05.178 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 0
+2018-04-29 02:26:05.179 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:26:05.179 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:26:05.179 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:26:05.180 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:26:05.181 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 0
+2018-04-29 02:26:05.182 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902260585674.jpeg
+2018-04-29 02:26:05.182 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902260585674.jpeg
+2018-04-29 02:26:05.257 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902260540095.png
+2018-04-29 02:26:05.257 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902260540095.png
+2018-04-29 02:26:05.314 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:26:05.315 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:26:05.340 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:26:05.342 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902260585674.jpeg(String), null, null, 2018-04-29 02:26:05.257(Timestamp), null, 2(Long), upload/item/shop/3/2018042902260540095.png(String), null, null, 2018-04-29 02:26:05.313(Timestamp), null, 2(Long)
+2018-04-29 02:26:05.346 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:26:05.346 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:26:05.346 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:26:05.356 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET name=?, desc=?, addr=?, update_time=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:26:05.357 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902260390470.jpeg(String), 2018-04-29 02:26:03.657(Timestamp), 31(Long), 2(Long), 3(Long)
+2018-04-29 02:28:32.274 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:28:32.277 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:32.287 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:28:32.292 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:28:32.294 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:32.304 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:28:32.309 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:28:32.325 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 1
+2018-04-29 02:28:32.326 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:28:32.336 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283293215.jpeg
+2018-04-29 02:28:32.337 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283293215.jpeg
+2018-04-29 02:28:32.350 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 1
+2018-04-29 02:28:32.360 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283233161.jpeg
+2018-04-29 02:28:32.361 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283233161.jpeg
+2018-04-29 02:28:33.682 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:28:33.682 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.682 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:28:33.682 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:28:33.683 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.685 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:28:33.685 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:28:33.685 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:28:33.689 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 0
+2018-04-29 02:28:33.689 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 0
+2018-04-29 02:28:33.689 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:28:33.690 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:28:33.693 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 0
+2018-04-29 02:28:33.693 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 0
+2018-04-29 02:28:33.694 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283397634.jpeg
+2018-04-29 02:28:33.694 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283321977.jpeg
+2018-04-29 02:28:33.694 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283397634.jpeg
+2018-04-29 02:28:33.694 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283321977.jpeg
+2018-04-29 02:28:33.785 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283367218.png
+2018-04-29 02:28:33.786 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283367218.png
+2018-04-29 02:28:33.790 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283313235.png
+2018-04-29 02:28:33.791 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283313235.png
+2018-04-29 02:28:33.917 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:28:33.917 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:28:33.917 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.918 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.954 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:28:33.958 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:28:33.959 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902283397634.jpeg(String), null, null, 2018-04-29 02:28:33.787(Timestamp), null, 2(Long), upload/item/shop/3/2018042902283313235.png(String), null, null, 2018-04-29 02:28:33.916(Timestamp), null, 2(Long)
+2018-04-29 02:28:33.962 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902283321977.jpeg(String), null, null, 2018-04-29 02:28:33.785(Timestamp), null, 2(Long), upload/item/shop/3/2018042902283367218.png(String), null, null, 2018-04-29 02:28:33.916(Timestamp), null, 2(Long)
+2018-04-29 02:28:33.967 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:28:33.968 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:28:33.968 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:33.980 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, `desc`=?, `add`r=?, `update_time`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:28:33.983 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902283233161.jpeg(String), 2018-04-29 02:28:32.268(Timestamp), 31(Long), 2(Long), 3(Long)
+2018-04-29 02:28:33.997 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:28:34.004 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:34.023 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:28:34.071 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:28:34.093 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 1
+2018-04-29 02:28:34.100 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283431011.jpeg
+2018-04-29 02:28:34.100 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283431011.jpeg
+2018-04-29 02:28:35.722 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:28:35.722 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:35.723 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:28:35.723 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:28:35.724 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 0
+2018-04-29 02:28:35.724 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:28:35.724 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:35.724 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:28:35.725 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:28:35.726 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 0
+2018-04-29 02:28:35.726 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283546249.jpeg
+2018-04-29 02:28:35.726 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283546249.jpeg
+2018-04-29 02:28:35.788 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902283512667.png
+2018-04-29 02:28:35.788 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902283512667.png
+2018-04-29 02:28:35.844 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:28:35.845 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:35.868 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:28:35.871 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902283546249.jpeg(String), null, null, 2018-04-29 02:28:35.788(Timestamp), null, 2(Long), upload/item/shop/3/2018042902283512667.png(String), null, null, 2018-04-29 02:28:35.844(Timestamp), null, 2(Long)
+2018-04-29 02:28:35.872 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:28:35.873 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:28:35.873 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:28:35.883 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, `desc`=?, `add`r=?, `update_time`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:28:35.883 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902283431011.jpeg(String), 2018-04-29 02:28:33.952(Timestamp), 31(Long), 2(Long), 3(Long)
+2018-04-29 02:29:26.917 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:29:26.919 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:26.927 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:29:26.949 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:29:26.970 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 1
+2018-04-29 02:29:26.977 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902292664923.jpeg
+2018-04-29 02:29:26.978 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902292664923.jpeg
+2018-04-29 02:29:27.009 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:29:27.013 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:27.023 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:29:27.052 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:29:27.078 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 1
+2018-04-29 02:29:27.088 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902292774791.jpeg
+2018-04-29 02:29:27.088 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902292774791.jpeg
+2018-04-29 02:29:28.311 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:29:28.311 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.312 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:29:28.312 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:29:28.313 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 0
+2018-04-29 02:29:28.313 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:29:28.313 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.313 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:29:28.314 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:29:28.315 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 0
+2018-04-29 02:29:28.315 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902292865227.jpeg
+2018-04-29 02:29:28.315 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902292865227.jpeg
+2018-04-29 02:29:28.332 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:29:28.333 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.333 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:29:28.333 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:29:28.334 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 0
+2018-04-29 02:29:28.334 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:29:28.335 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.335 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:29:28.335 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:29:28.336 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 0
+2018-04-29 02:29:28.337 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902292861925.jpeg
+2018-04-29 02:29:28.337 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902292861925.jpeg
+2018-04-29 02:29:28.378 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902292866687.png
+2018-04-29 02:29:28.378 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902292866687.png
+2018-04-29 02:29:28.398 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902292895537.png
+2018-04-29 02:29:28.398 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902292895537.png
+2018-04-29 02:29:28.440 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:29:28.440 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.464 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:29:28.464 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.471 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:29:28.475 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902292865227.jpeg(String), null, null, 2018-04-29 02:29:28.378(Timestamp), null, 2(Long), upload/item/shop/3/2018042902292866687.png(String), null, null, 2018-04-29 02:29:28.439(Timestamp), null, 2(Long)
+2018-04-29 02:29:28.491 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:29:28.494 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902292861925.jpeg(String), null, null, 2018-04-29 02:29:28.398(Timestamp), null, 2(Long), upload/item/shop/3/2018042902292895537.png(String), null, null, 2018-04-29 02:29:28.463(Timestamp), null, 2(Long)
+2018-04-29 02:29:28.496 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:29:28.497 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:29:28.497 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:29:28.512 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, `desc`=?, `addr`=?, `update_time`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:29:28.513 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902292664923.jpeg(String), 2018-04-29 02:29:26.901(Timestamp), 31(Long), 2(Long), 3(Long)
+2018-04-29 02:29:28.515 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 02:33:04.607 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:33:04.610 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:04.618 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:33:04.640 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:33:04.658 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2018-04-29 02:33:04.665 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902330419055.jpeg
+2018-04-29 02:33:04.665 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902330419055.jpeg
+2018-04-29 02:33:05.956 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:33:05.956 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:05.956 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:33:05.956 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:33:05.959 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2018-04-29 02:33:05.960 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:33:05.960 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:05.960 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:33:05.960 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:33:05.962 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2018-04-29 02:33:05.962 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902330591802.jpeg
+2018-04-29 02:33:05.962 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902330591802.jpeg
+2018-04-29 02:33:06.017 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902330627564.png
+2018-04-29 02:33:06.017 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902330627564.png
+2018-04-29 02:33:06.082 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:33:06.082 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:06.103 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:33:06.105 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902330591802.jpeg(String), null, null, 2018-04-29 02:33:06.017(Timestamp), null, 2(Long), upload/item/shop/3/2018042902330627564.png(String), null, null, 2018-04-29 02:33:06.081(Timestamp), null, 2(Long)
+2018-04-29 02:33:06.106 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:33:06.107 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:33:06.107 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:06.115 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, `desc`=?, `addr`=?, `update_time`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:33:06.116 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902330419055.jpeg(String), 2018-04-29 02:33:04.594(Timestamp), 31(Long), 2(Long), 3(Long)
+2018-04-29 02:33:06.117 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 02:33:29.604 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:33:29.607 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:29.617 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:33:29.646 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:33:29.666 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2018-04-29 02:33:29.674 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902332928544.jpeg
+2018-04-29 02:33:29.674 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902332928544.jpeg
+2018-04-29 02:33:31.012 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:33:31.012 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:31.012 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:33:31.013 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:33:31.015 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2018-04-29 02:33:31.016 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:33:31.016 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:31.016 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:33:31.017 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:33:31.018 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2018-04-29 02:33:31.018 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902333162987.jpeg
+2018-04-29 02:33:31.018 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902333162987.jpeg
+2018-04-29 02:33:31.078 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902333147981.png
+2018-04-29 02:33:31.078 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902333147981.png
+2018-04-29 02:33:31.151 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:33:31.151 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:31.172 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:33:31.174 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902333162987.jpeg(String), null, null, 2018-04-29 02:33:31.078(Timestamp), null, 2(Long), upload/item/shop/3/2018042902333147981.png(String), null, null, 2018-04-29 02:33:31.15(Timestamp), null, 2(Long)
+2018-04-29 02:33:31.176 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:33:31.176 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:33:31.176 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:33:31.184 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, `desc`=?, `addr`=?, `update_time`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:33:31.185 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902332928544.jpeg(String), 2018-04-29 02:33:29.589(Timestamp), 31(Long), 2(Long), 3(Long)
+2018-04-29 02:33:31.186 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 02:34:11.679 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:34:11.682 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:34:11.689 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 02:34:11.711 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 02:34:11.729 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2018-04-29 02:34:11.736 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902341178069.jpeg
+2018-04-29 02:34:11.737 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902341178069.jpeg
+2018-04-29 02:34:13.040 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.queryProductImgList] use [master] Strategy, SqlCommanType [SELECT]...
+2018-04-29 02:34:13.040 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:34:13.041 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT `product_img_id`, `addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id` FROM tb_product_img WHERE product_id = ? ORDER BY product_img_id ASC 
+2018-04-29 02:34:13.041 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2018-04-29 02:34:13.043 [main] DEBUG c.l.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2018-04-29 02:34:13.044 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.deleteProductImgByProductId] use [master] Strategy, SqlCommanType [DELETE]...
+2018-04-29 02:34:13.044 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:34:13.044 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2018-04-29 02:34:13.045 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2018-04-29 02:34:13.045 [main] DEBUG c.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2018-04-29 02:34:13.046 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902341367959.jpeg
+2018-04-29 02:34:13.046 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902341367959.jpeg
+2018-04-29 02:34:13.099 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current relativeAddr is upload/item/shop/3/2018042902341396673.png
+2018-04-29 02:34:13.100 [main] DEBUG com.liangweibang.o2o.util.ImageUtil - current complete addr is /Users/liangweibang/workspace/eclipse-workspace/o2o/img/upload/item/shop/3/2018042902341396673.png
+2018-04-29 02:34:13.163 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 02:34:13.164 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:34:13.184 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 02:34:13.187 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: upload/item/shop/3/2018042902341367959.jpeg(String), null, null, 2018-04-29 02:34:13.099(Timestamp), null, 2(Long), upload/item/shop/3/2018042902341396673.png(String), null, null, 2018-04-29 02:34:13.163(Timestamp), null, 2(Long)
+2018-04-29 02:34:13.188 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 02:34:13.188 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 02:34:13.188 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 02:34:13.196 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, `desc`=?, `addr`=?, `update_time`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 02:34:13.197 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 正式的商品(String), 正式的商品(String), upload/item/shop/3/2018042902341178069.jpeg(String), 2018-04-29 02:34:11.664(Timestamp), 2(Long), 2(Long), 3(Long)
+2018-04-29 02:34:13.198 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 17:28:55.047 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:28:55.051 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:28:55.067 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:28:55.093 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:28:55.095 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:28:55.101 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:28:55.101 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:28:55.101 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:28:55.103 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:28:55.104 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:28:55.105 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:28:55.105 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:28:55.105 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:28:55.106 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:28:55.107 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:28:55.139 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:28:55.139 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:28:55.150 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:28:55.150 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:28:55.151 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 17:28:55.153 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-29 17:28:55.149(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-29 17:28:55.149(Timestamp), null, 2(Long)
+2018-04-29 17:28:55.154 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 17:28:55.155 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:28:55.155 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:28:55.156 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 17:28:55.169 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 17:28:55.188 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 3
+2018-04-29 17:28:55.195 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 17:28:55.196 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:28:55.198 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 17:28:55.198 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
+2018-04-29 17:28:55.199 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 17:29:47.211 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:47.214 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:47.226 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:47.250 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:29:47.257 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:29:47.263 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:47.263 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:47.263 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:47.264 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:29:47.265 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:29:47.266 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:47.266 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:47.266 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:47.267 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:29:47.268 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:29:47.299 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:29:47.299 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:29:47.300 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT `product_id`, `name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id` FROM tb_product ORDER BY priority DESC LIMIT ?, ?; 
+2018-04-29 17:29:47.312 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-04-29 17:29:47.333 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2018-04-29 17:29:47.347 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:47.348 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:47.350 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:47.353 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-29 17:29:47.347(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-29 17:29:47.347(Timestamp), null, 2(Long)
+2018-04-29 17:29:47.354 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 17:29:47.356 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:29:47.356 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:29:47.356 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 17:29:47.357 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 17:29:47.364 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 5
+2018-04-29 17:29:47.367 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 17:29:47.367 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:47.370 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 17:29:47.371 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
+2018-04-29 17:29:47.373 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 17:29:48.230 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:48.232 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:48.244 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:48.269 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:29:48.277 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:29:48.284 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:48.284 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:48.284 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:48.285 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:29:48.286 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:29:48.287 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:48.287 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:48.287 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:48.288 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:29:48.289 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:29:48.320 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:29:48.320 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:29:48.321 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT `product_id`, `name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id` FROM tb_product ORDER BY priority DESC LIMIT ?, ?; 
+2018-04-29 17:29:48.332 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-04-29 17:29:48.348 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2018-04-29 17:29:48.365 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:29:48.365 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:48.367 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 17:29:48.370 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-29 17:29:48.364(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-29 17:29:48.364(Timestamp), null, 2(Long)
+2018-04-29 17:29:48.374 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 17:29:48.375 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:29:48.375 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:29:48.375 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 17:29:48.376 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 17:29:48.383 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 7
+2018-04-29 17:29:48.385 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 17:29:48.385 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:29:48.387 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 17:29:48.388 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
+2018-04-29 17:29:48.389 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 17:31:00.043 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:31:00.045 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:31:00.058 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:31:00.084 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:31:00.091 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:31:00.097 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:31:00.098 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:31:00.098 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:31:00.099 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:31:00.100 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:31:00.101 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:31:00.101 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:31:00.101 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:31:00.102 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:31:00.103 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:31:00.133 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:31:00.133 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:31:00.134 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT `product_id`, `name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id` FROM tb_product ORDER BY priority DESC LIMIT ?, ?; 
+2018-04-29 17:31:00.146 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-04-29 17:31:00.172 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2018-04-29 17:31:00.179 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:31:00.180 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:31:00.180 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
+2018-04-29 17:31:00.180 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2018-04-29 17:31:00.182 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-04-29 17:31:00.186 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:31:00.186 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:31:00.189 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 17:31:00.191 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-29 17:31:00.185(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-29 17:31:00.185(Timestamp), null, 2(Long)
+2018-04-29 17:31:00.195 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-04-29 17:31:00.196 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductById] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:31:00.196 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:31:00.196 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.name, p.desc, p.addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.update_time, p.status, p.product_category_id, p.shop_id, pm.product_img_id, pm.addr AS detail_img, pm.desc, pm.priority, pm.create_time, pm.update_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-04-29 17:31:00.197 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2018-04-29 17:31:00.206 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductById - <==      Total: 9
+2018-04-29 17:31:00.209 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 17:31:00.209 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:31:00.212 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 17:31:00.212 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
+2018-04-29 17:31:00.214 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-04-29 17:33:50.003 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:33:50.006 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:33:50.020 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:33:50.047 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:33:50.098 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:33:50.103 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:33:50.104 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:33:50.104 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:33:50.105 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:33:50.106 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:33:50.106 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:33:50.106 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:33:50.107 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:33:50.107 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:33:50.108 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:33:50.139 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:33:50.140 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:33:50.141 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT `product_id`, `name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id` FROM tb_product ORDER BY priority DESC LIMIT ?, ?; 
+2018-04-29 17:33:50.156 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-04-29 17:33:50.174 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2018-04-29 17:33:50.180 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:33:50.180 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:33:50.181 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
+2018-04-29 17:33:50.181 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2018-04-29 17:33:50.182 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-04-29 17:33:50.187 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:33:50.187 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:33:50.189 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 17:33:50.191 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-29 17:33:50.186(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-29 17:33:50.186(Timestamp), null, 2(Long)
+2018-04-29 17:33:50.249 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 17:33:50.250 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:33:50.252 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 17:33:50.253 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
+2018-04-29 17:33:50.254 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 0
+2018-04-29 17:35:19.738 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:35:19.740 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:35:19.753 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:35:19.781 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品1(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:35:19.788 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:35:19.794 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:35:19.795 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:35:19.795 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:35:19.796 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品2(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:35:19.797 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:35:19.798 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.insertProduct] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:35:19.798 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:35:19.798 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(`name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2018-04-29 17:35:19.799 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试商品3(String), desc1(String), addr1(String), null, null, 1(Integer), null, null, 1(Integer), 4(Long), 3(Long)
+2018-04-29 17:35:19.800 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2018-04-29 17:35:19.829 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductList] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:35:19.830 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:35:19.830 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT `product_id`, `name`, `desc`, `addr`, `normal_price`, `promotion_price`, `priority`, `create_time`, `update_time`, `status`, `product_category_id`, `shop_id` FROM tb_product ORDER BY priority DESC LIMIT ?, ?; 
+2018-04-29 17:35:19.841 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-04-29 17:35:19.862 [main] DEBUG c.liangweibang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2018-04-29 17:35:19.869 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.queryProductCount] use [slave] Strategy, SqlCommanType [SELECT]...
+2018-04-29 17:35:19.869 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2018-04-29 17:35:19.870 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
+2018-04-29 17:35:19.870 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2018-04-29 17:35:19.872 [main] DEBUG c.l.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-04-29 17:35:19.876 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductImgDao.batchInsertProductImg] use [master] Strategy, SqlCommanType [INSERT]...
+2018-04-29 17:35:19.877 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:35:19.879 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(`addr`, `desc`, `priority`, `create_time`, `update_time`, `product_id`) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+2018-04-29 17:35:19.882 [main] DEBUG c.l.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-04-29 17:35:19.876(Timestamp), null, 2(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-04-29 17:35:19.876(Timestamp), null, 2(Long)
+2018-04-29 17:35:19.927 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceInterceptor - 设置方法[com.liangweibang.o2o.dao.ProductDao.updateProduct] use [master] Strategy, SqlCommanType [UPDATE]...
+2018-04-29 17:35:19.928 [main] DEBUG c.l.o2o.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2018-04-29 17:35:19.935 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET `name`=?, product_category_id=? WHERE product_id = ? AND shop_id = ? 
+2018-04-29 17:35:19.936 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - ==> Parameters: 奶茶111(String), 31(Long), 2(Long), 3(Long)
+2018-04-29 17:35:19.937 [main] DEBUG com.liangweibang.o2o.dao.ProductDao.updateProduct - <==    Updates: 0
