@@ -151,8 +151,8 @@ public class ShopManagementController {
 		// 2. 修改店铺信息
 		if (shop != null && shop.getShopId() != null) {
 			PersonInfo owner = new PersonInfo();
-			// TODO session
-			owner.setUserId(1L);
+			Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+			owner.setUserId(currentShop.getShopId());
 			shop.setOwner(owner);
 			ShopExecution shopExecution;
 			try {

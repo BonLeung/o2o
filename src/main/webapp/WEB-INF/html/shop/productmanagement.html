@@ -16,19 +16,24 @@
             background: #fff;
             padding: 0 10px;
         }
-        .operation-list {
-        	margin: 0;
-        	padding: 10px 0 0 0;
-        }
-        .operation-item {
-            display: block;
+        .row-product {
+            position: relative;
             height: 50px;
             line-height: 50px;
+        }
+        .row-product:after {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            content: '';
+            height: 1px;
             width: 100%;
             background: #f5f5f5;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            text-align: center;
+            transform: scaleY(0.5);
+            -webkit-transform: scaleY(0.5);
+        }
+        .edit, .status, .preview {
+            margin-right: 3px;
         }
     </style>
 </head>
@@ -39,15 +44,25 @@
             <header class="bar bar-nav">
                 <h1 class="title">商品管理</h1>
                 </header>
-            <div class="content infinite-scroll infinite-scroll-bottom">
-                <div class="operation-wrap">
-                    <ul class="operation-list">
-                        <li><a href="" class="operation-item" id="shop_info" external>商铺信息</a></li>
-                        <li><a href="" class="operation-item" id="shop_info" external>商品管理</a></li>
-                        <li><a href="" class="operation-item" id="category_manage" external>类别管理</a></li>                        
-                        <li><a href="" class="operation-item button-danger" id="shop_info" onclick="window.history.back()">返回</a></li>                        
-                    </ul>
-                </div>
+            <div class="content">
+               <div class="content-block">
+                   <div class="row row-product">
+                       <div class="col-33">商品名称</div>
+                       <div class="col-20">优先级</div>
+                       <div class="col-40">操作</div>
+                   </div>
+                   <div class="product-wrap"></div>
+               </div>
+               <div class="content-block">
+                   <div class="row">
+                       <div class="col-50">
+                           <a href="/o2o/shopadmin/shopmanage" class="button button-big button-fill button-danger" external>返回</a>
+                       </div>
+                       <div class="col-50">
+                           <a href="/o2o/shopadmin/productoperation" class="button button-fill button-big button-success" external id="new">新增</a>
+                       </div>
+                   </div>
+               </div>
             </div>
         </div>
     </div>
@@ -56,7 +71,7 @@
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='../resources/js/common/common.js' charset='utf-8'></script>
-    <script type='text/javascript' src='../resources/js/shop/shopmanagement.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../resources/js/shop/productmanagement.js' charset='utf-8'></script>
 </body>
 
 </html>

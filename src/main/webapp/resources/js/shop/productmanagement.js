@@ -15,7 +15,7 @@ $(function() {
                 // 商品名称，优先级，上架/下架（含productId），编辑按钮（含productId）
                 // 预览（含productId）
                 productList.map(function(item, inde) {
-                    var tetxOp = '下架';
+                    var textOp = '下架';
                     var contraryStatus = 0;
                     if (item.status == 0) {
                         // 若状态值为0，表明是已下架的商品，操作变为上架（即点击按钮上架相关商品）
@@ -42,7 +42,7 @@ $(function() {
     }
 
     // 将 class 为 product-wrap 里面的 a 标签绑定上点击事件
-    ('.product-wrap').on('click', 'a', function(e) {
+    $('.product-wrap').on('click', 'a', function(e) {
         var target = $(e.currentTarget);
         if (target.hasClass('edit')) {
             // 如果 class 为 edit 则点击就进入店铺信息编辑页面，并带有 productId 参数

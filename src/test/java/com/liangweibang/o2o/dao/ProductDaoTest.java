@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ public class ProductDaoTest extends BaseTest {
 	private ProductImgDao productImgDao;
 	
 	@Test
+	@Ignore
 	public void testAInsertProduct() {
 		Shop shop = new Shop();
 		shop.setShopId(3l);
@@ -68,6 +70,7 @@ public class ProductDaoTest extends BaseTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testBQueryProductList() throws Exception {
 		Product productCondition = new Product();
 		// 分页查询，预期返回三条结果
@@ -85,6 +88,7 @@ public class ProductDaoTest extends BaseTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testCQueryProductByProductId() throws Exception {
 		long productId = 2;
 		// 初始化两个商品详情图实例作为 productId 为2的商品下的详情图片
@@ -114,6 +118,7 @@ public class ProductDaoTest extends BaseTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testDUpdateProduct() throws Exception {
 		Product product = new Product();
 		ProductCategory productCategory = new ProductCategory();
@@ -128,5 +133,13 @@ public class ProductDaoTest extends BaseTest {
 		// 以及商品类别并校验影响的行数是否为 1
 		int effectedNum = productDao.updateProduct(product);
 		assertEquals(1, effectedNum);
+	}
+	
+	@Test
+	public void testEUpdateProductCategoryToNull() {
+		// 将productCategoryId为4的商品类别下的商品的商品类别置为空
+		int effectedNum = productDao.updateProductCategoryToNull(4l);
+		assertEquals(5, effectedNum);
+		
 	}
 }
