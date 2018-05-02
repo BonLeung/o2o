@@ -39,7 +39,6 @@ public class ShopServiceImpl implements ShopService {
 			shop.setCreateTime(new Date());
 			shop.setUpdateTime(new Date());
 			int effectedNum = shopDao.insertShop(shop);
-			System.out.println(effectedNum);
 
 			if (effectedNum <= 0) {
 				throw new ShopOperationException("店铺创建失败");

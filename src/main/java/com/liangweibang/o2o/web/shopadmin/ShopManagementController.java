@@ -190,7 +190,7 @@ public class ShopManagementController {
 		List<Area> areas = new ArrayList<Area>();
 		
 		try {
-			shopCategories = shopCategoryService.getShopCategoryList(new ShopCategory());
+			shopCategories = shopCategoryService.getShopCategoryList(null);
 			areas = areaService.getAreaList();
 			modelMap.put("success", true);
 			modelMap.put("areaList", areas);
